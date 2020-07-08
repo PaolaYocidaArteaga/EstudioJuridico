@@ -1,0 +1,649 @@
+*{
+    margin:0px;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    body{
+       
+    background: #1e130c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #9a8478, #1e130c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #9a8478, #1e130c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    /* DEL MENU*/
+    .menu_bar{
+        display: none;
+    }
+    header nav{
+        background-color: rgba(105, 56, 24, 0.911);
+        
+        position: fixed;
+        
+        z-index: 1000;
+        max-width: 609px;
+        width: 95%;
+        margin: 0px 340px;
+        
+    }
+    header nav ul{
+        list-style: none;
+    }
+    header nav ul li{
+        display: inline-block;
+        position: relative;
+    }
+    header nav ul li:hover{
+        background: rgba(221, 95, 22, 0.562);
+    }
+    header nav ul li a {
+        color :#ccc;
+        display:block;
+        text-decoration:none;
+        padding: 20px;
+    }
+    header nav ul li a span{
+        margin-right: 10px;
+    }
+    
+    header nav ul li :hover .children{
+        display: block;
+    }
+    header nav ul li .children{
+        display: none;
+        background: #011826;
+        position: absolute;
+        width: 120%;
+        z-index: 1000;
+    }
+    header nav ul li .children li {
+        display: block;
+        overflow: hidden;
+        border-bottom: 1px solid rgb(255, 255, 255, .5);
+    }
+    header nav ul li .children li a {
+        display: block;
+    }
+    header nav ul li .children li a span {
+        float: right;
+        position: relative;
+        top: 3px;
+        margin-right: 0;
+        margin-left: 10px;
+    }  
+    header nav ul li .caret{
+        position: relative;
+        top: 3px;
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+    
+    
+    
+    /*
+    nav{
+        text-align: right;
+        padding: 30px 50px 0 0 ;
+    }
+    nav > a{
+        color: #fff;
+        font-weight: 300;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+    nav > a:hover{
+        color: rgba(253, 253, 253, 0.596);
+        text-decoration: underline;
+    }
+    */
+    .contenedor{
+        padding: 60px 0;
+        width: 90% ;
+        max-width: 1000px;
+        margin: auto;
+        overflow: hidden;
+    }
+    .titulo{
+        font-family: 'Tangerine';
+        color: #faf6f3e8;
+        font-size: 70px;
+        text-align: center;
+        margin-bottom: 60px;
+        text-shadow: -5px 5px rgba(199, 168, 133, 0.774);
+    }
+    header {
+        width: 100%;
+        height: 450px;
+        background: #e6e21c;
+        background: -webkit-linear-gradient(to right, hsla(54, 88%, 46%, 0.712), hsla(36, 86%, 25%, 0.26)), url(../imagenes/profesionales.jpg);
+        background: linear-gradient(to right, hsla(61, 90%, 52%, 0.685), hsla(32, 90%, 41%, 0.178)), url(../imagenes/profesionales.jpg) ;
+        background-size:cover;
+        background-attachment: fixed;
+        position: relative;  
+        
+    }
+    
+    
+    header.textos-header{
+        /*
+        display: flex;
+        height: 750px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Tangerine', cursive;
+        animation: fadeInDown; 
+        animation-duration: 1.8s;
+        */
+    }
+    .textos-header h1{
+        
+        display: flex;
+        height: 100px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Tangerine', cursive;
+        animation: fadeInLeft; 
+        animation-duration: 2.8s;
+    
+        font-size: 160px; 
+        color: rgb(255, 255, 255);
+        text-shadow: -10px 10px rgba(112, 58, 13, 0.61);
+    }
+    .textos-header h2{
+        display: flex;
+        height: 250px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Tangerine', cursive;
+        
+        animation: fadeInDown; 
+        
+        animation-duration: 2.2s;
+        --animate-delay: 2.9s;
+    
+        font-size: 110px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.904);
+        text-shadow: -10px 10px rgba(112, 58, 13, 0.719);
+    }
+    .textos-header h3{
+        padding: 10px;
+        font-size: 25px;
+        font-weight: 40;
+        
+        color: rgba(255, 255, 255, 0.904);
+        text-shadow: -10px 10px rgba(112, 58, 13, 0.719);
+        animation: fadeInLeft; 
+        animation-duration: 3.8s;
+        text-align: right;
+        
+        
+        width: 100%;
+    }
+    
+    
+    .wave{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        
+    }
+    
+    /* about us*/
+    main .sobre-nosotros{
+        padding: 100px 0 60px 0;
+    }
+    .contenedor-sobre-nosotros{
+        display: flex;
+        justify-content: space-evenly;
+        color: rgb(236, 233, 220);
+    }
+    .imagen-about-us{
+        width: 40%;
+    }
+    .sobre-nosotros .contenido-textos{
+        width: 48%;
+    }
+    .contenido-textos h3{
+        margin-bottom: 25px;
+        color: rgba(236, 233, 220, 0.966);
+    }
+    .contenido-textos h3 span{
+        background: #a87e47;
+        color: rgba(236, 233, 220, 0.966);
+        border-radius: 50%;
+        display:inline-block;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+        box-shadow: 0 0 6px 0 rgba(224, 214, 63, 0.411);
+        margin-right: 5px;
+    
+    }
+    .contenido-textos p{
+        padding: 0px 0px 30px 15px;
+        font-weight: 300;
+        text-align: justify;
+        
+    }
+    .portafolio{
+        /*background: rgb(255, 255, 255);*/
+    }
+    .galeria-port{
+     display: flex;
+     justify-content: space-evenly;
+     flex-wrap: wrap;   
+    }
+    .imagen-port{
+        width: 24%;
+        margin-bottom:10% ;
+       
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 0 6px 0 rgba(236, 233, 220, 0.966);
+    }
+    .imagen-port>img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .hover-galeria{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transform: scale(0);
+        background: hsla(32, 79%, 24%, 0.7);
+        transition: transform .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .hover-galeria img{
+       width: 100px; 
+    }
+    .hover-galeria p{
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+        font-family: 'Tangerine';
+        text-align: center;
+    
+    }
+    .imagen-port:hover .hover-galeria{
+        transform: scale(1);
+    }
+    
+    .cards{
+        display: flex;
+        justify-content: space-evenly; 
+    }
+    
+    .cards .card{
+        background: hsla(32, 79%, 24%, 0.7);
+        display: flex;
+        width: 45%;
+        height: 300px;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 5px;
+        box-shadow: 0 0 6px 0 rgba(236, 233, 220, 0.966);
+    }
+    .cards .card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    }
+    .cards .card > .contenido-texto-card {
+    width: 69%;
+    color: #fff;
+    font-family: 'Tangerine';
+    font-size: 40px;
+    
+    }
+    
+    .cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+    font-family: arial;
+    font-size: 20px;
+    
+    }
+    
+    .about-service{
+        background: hsla(32, 79%, 24%, 0.7); 
+        padding-bottom: 30px;
+        
+    }
+    .servicio-cont{
+        
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    .servicio-ind{
+        width: 28%;
+    
+        text-align: center;
+    }
+    .servicio-ind img{
+        width: 90%;
+    }
+    .servicio-ind h3{
+        margin: 10px 0;
+    }
+    
+    .servicio-ind p{
+        font-weight: 300;
+        text-align: justify;
+    
+    }
+    
+    footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+    }
+    .contenedor-foorter{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+    
+    }
+     .content-foo{
+         text-align: center;
+     }
+    
+     .content-foo h4{
+        color: #fff;
+        border-bottom: 3px solid #a56356;
+        padding-bottom: 5px;
+        margin-bottom: 10px; 
+     }
+     .content.foo h5{
+         color: rgba(219, 147, 13, 0.712);
+     }
+     .titulo-final{
+         text-align: center;
+        font-size: 24px;
+        margin: 20px 0 0 0;
+        color: #ccc;
+     }
+    /*
+    .menu-fixed {
+        position: sticky;
+        z-index:1000;
+        top:0;
+        max-width:800px;
+        width:100%;
+        box-shadow:0px 4px 3px rgba(0,0,0,.5);
+    }
+    .menu-fixed ul li a {
+        padding: 15px 20px;
+    }
+    */
+     @media screen and (max-width:900px){
+       header  {
+        background-position: center;
+       }
+       .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+    
+       .sobre-nosotros .contenido-textos{
+           width: 90%;
+       }
+       .imagen-about-us{
+        width: 90%;
+       }
+       .imagen-port{
+           width: 44%;
+       }
+       .cards{
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+       }
+       .cards .card{
+           width: 90%;
+       }
+       .cards .card:first-child{
+        margin-bottom: 30px;
+        }
+    .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+        }
+        .servicio-ind{
+            width: 100%;
+            text-align: center;
+        }
+        .servicio-ind:ntc-child(1), .servicio-ind:nth-child(2){
+          margin-bottom: 60px;  
+        }
+        .servicio-ind img{
+            width: 90%;
+        }
+        .textos-header h1{
+            font-size: 105px;
+        }
+        .textos-header h2{
+           font-size: 90px;
+       }
+    
+       .menu_bar{
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: rgba(105, 56, 24, 0.781);
+    }
+    
+    .menu_bar .bt-menu{
+        display: block;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        background-color: rgba(105, 56, 24, 0.781);
+    }
+    
+    .menu_bar span{
+        float: right;
+        font-size: 30px;
+    }
+    
+    header nav{
+        width: 70%;
+        height: calc(100% - 80px);
+        position: fixed;
+        right:100%;
+        margin: 0;
+        overflow: scroll;
+    }
+    header nav ul li {
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    header nav ul li a {
+        display: block;
+    }
+    header nav ul li .children{
+        width: 100%;
+        position: relative;
+    }
+    header nav ul li:hover .children{
+        display: none;
+    }
+    header nav ul li a .children{
+        width: 40%;
+        position: relative;   
+    }
+    header nav ul li a .children li a{
+     margin-left: 20px;
+    }
+    header nav ul li .caret{
+        float: right;
+    }
+    
+    
+    header nav ul li .children{
+        display: none;
+        background: #011826;
+        position: absolute;
+        width: 70%;
+        z-index: 1000;
+    }
+    
+     }
+    
+     @media screen and (max-width:500px){
+        
+         header nav{
+             text-align: center;
+             padding: 30px 0 0 0;
+         }
+         header nav >a{
+             margin-right: 5px;
+         }
+         
+         .textos-header h1{
+             font-size: 75px;
+         }
+         .textos-header h2{
+            font-size: 70px;
+        }
+    
+        .imagen-about-us{
+            margin-bottom: 60px;
+            width: 90%;
+        }
+        .sobre-nosotros .contenido-textos{
+            width: 95%;
+        }
+    
+        .imagen-port{
+            width: 90%;
+        }
+    
+        .cards .card{
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cards .card img{
+            width: 120px;
+            height: 120px;
+        }
+    
+        .contenedor-foorter{
+        flex-direction: column;
+        border: none;
+    
+        }
+        .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+        }
+        .content-foo h4{
+        border: none;
+        }
+        .content-foo p{
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2 ;
+        padding-bottom: 20px;
+        }
+        .titulo-final{
+            font-size: 20px;
+        }
+    
+        .menu_bar{
+            display: block;
+            width: 100%;
+            position: fixed;
+            
+            top: 0;
+            background: rgba(221, 95, 22, 0.562);  
+        }
+        
+        .menu_bar .bt-menu{
+            display: block;
+            padding: 20px;
+            color: #fff;
+            overflow: hidden;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .menu_bar span{
+            float: right;
+            font-size: 30px;
+        }
+        
+        header nav{
+            width: 70%;
+            height: calc(100% - 80px);
+            position: fixed;
+            right:100%;
+            margin: 0;
+            overflow: scroll;
+        }
+        header nav ul li {
+            display: block;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        header nav ul li a {
+            display: block;
+        }
+        header nav ul li:hover .children{
+            display: none;
+        }
+        header nav ul li a .children{
+            width: 40%;
+            position: relative;   
+        }
+        header nav ul li a .children li a{
+         margin-left: 20px;
+        }
+        header nav ul li .caret{
+            float: right;
+        }
+    
+    
+        header nav ul li .children{
+            display: none;
+            background: #011826;
+            position: absolute;
+            width: 70%;
+            z-index: 1000;
+        }
+    }
+    
